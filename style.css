@@ -1,0 +1,16 @@
+body {
+    background-image: url(bg.jpg);
+    text-align: center;
+}
+.heading {
+    font-family: 'Amaranth';
+    font-size: 22px;
+    text-align: center;
+    background-color: aliceblue;    
+}
+.question,#treasure,#nextque,li{
+    font-family: 'Amaranth';
+    font-size: 22px;
+    text-align: center;
+    background-color: aliceblue;   
+}

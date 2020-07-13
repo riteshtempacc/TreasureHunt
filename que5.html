@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 5</title>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join("") ;
+            if (ans.toLowerCase() == "professor"){
+                code = "D" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que6.html" ;
+            }
+            else {
+                code = "Wrong Answer !!!" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "" ;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p class="heading">Question 5</p>
+    <p class="question"> It's A Task.</p>
+    <p class="question"> Send me a selfie </p><br> <img src="maze.png"> 
+    <form name="myForm" >
+        <input type="text" name="answer">
+        <input type="button" value="Submit" onclick="treasurefunc()">
+      </form>
+    <p id="treasure"></p>
+    <a id="nextque"></a>
+</body>

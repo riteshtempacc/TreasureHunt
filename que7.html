@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 7</title>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join("") ;
+            if (ans == "87"){
+                code = "E" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que8.html" ;
+            }
+            else {
+                code = "Wrong Answer !!!" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "" ;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p class="heading">Question 7</p>
+    <p class="question"></p> <img src="parked car.jpg" width=400 height=300>
+    <form name="myForm" >
+        <input type="text" name="answer">
+        <input type="button" value="Submit" onclick="treasurefunc()">
+      </form>
+    <p id="treasure"></p>
+    <a id="nextque"></a>
+</body>

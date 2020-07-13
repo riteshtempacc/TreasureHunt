@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 6</title>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join("") ;
+            if (ans.toLowerCase() == "dilsukhnagar"){
+                code = "N" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que7.html" ;
+            }
+            else {
+                code = "Wrong Answer !!!" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "" ;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p class="heading">Question 6</p>
+    <p class="question">Follow The Rules and crack the code</p>
+    <p class="question">&darr; &rarr; &rarr; &darr; &rarr; &darr; &darr; &rarr; &rarr; &uarr; &larr; </p>
+    <table align="center" style="background-color: aliceblue;">
+        <tr>
+            <td>D</td>
+            <td>W</td>
+            <td>S</td>
+            <td>E</td>
+            <td>C</td>
+            <td>V</td>
+            <td>T</td>
+            <td>V</td>
+            <td>J</td>
+            <td>K</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>L</td>
+            <td>S</td>
+            <td>P</td>
+            <td>L</td>
+            <td>N</td>
+            <td>W</td>
+            <td>E</td>
+            <td>R</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>R</td>
+            <td>U</td>
+            <td>K</td>
+            <td>F</td>
+            <td>H</td>
+            <td>J</td>
+            <td>C</td>
+            <td>V</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>O</td>
+            <td>F</td>
+            <td>H</td>
+            <td>R</td>
+            <td>A</td>
+            <td>R</td>
+            <td>T</td>
+            <td>C</td>
+            <td>V</td>
+        </tr>
+        <tr>
+            <td>N</td>
+            <td>E</td>
+            <td>C</td>
+            <td>N</td>
+            <td>A</td>
+            <td>G</td>
+            <td>G</td>
+            <td>K</td>
+            <td>D</td>
+            <td>R</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>R</td>
+            <td>T</td>
+            <td>U</td>
+            <td>C</td>
+            <td>N</td>
+            <td>E</td>
+            <td>A</td>
+            <td>S</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>A</td>
+            <td>T</td>
+            <td>M</td>
+            <td>A</td>
+            <td>N</td>
+            <td>R</td>
+            <td>O</td>
+            <td>B</td>
+            <td>I</td>
+        </tr>
+    </table>
+    <p class="question">Start from the first letter</p>
+    <form name="myForm" >
+        <input type="text" name="answer">
+        <input type="button" value="Submit" onclick="treasurefunc()">
+      </form>
+    <p id="treasure"></p>
+    <a id="nextque"></a>
+</body>

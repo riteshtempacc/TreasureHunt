@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 4</title>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            ans = ans.split(" ").join("") ;
+            if (ans.toLowerCase() == "charminar"){
+                code = "H" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que5.html" ;
+            }
+            else {
+                code = "Wrong Answer !!!" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "" ;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p class="heading">Question 4</p>
+    <p class="question"> What's this Landmark  <br> 17°21'41.7"N 78°28'28.6"E ?</p>
+    <form name="myForm" >
+        <input type="text" name="answer">
+        <input type="button" value="Submit" onclick="treasurefunc()">
+      </form>
+    <p id="treasure"></p>
+    <a id="nextque"></a>
+</body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Question 1</title>
+    <script>
+        function treasurefunc(){
+            var ans = document.forms["myForm"]["answer"].value;
+            var code = "ww";
+            if (ans.split(" ").join("") == "2013"){
+                code = "P" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "Next Question";
+                document.getElementById("nextque").href = "que2.html" ;
+            }
+            else {
+                code = "Wrong Answer !!!" ;
+                document.getElementById("treasure").innerHTML = code ;
+                document.getElementById('nextque').innerHTML = "";
+                document.getElementById("nextque").href = "" ;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p class="heading">Question 1</p>
+    <p class="question"> In which year &#x1F3C3; &#x1F37C; &#x1F170;&#xFE0F; &#x1F3C3; was released ?</p>
+    <form name="myForm" >
+        <input type="text" name="answer">
+        <input type="button" value="Submit" onclick="treasurefunc()">
+      </form>
+    <p id="treasure"></p>
+    <a id="nextque"></a>
+</body>
